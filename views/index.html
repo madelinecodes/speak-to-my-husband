@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Welcome to Glitch!</title>
+        <meta name="description" content="A cool thing made with Glitch">
+        <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/nes.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="nes-balloon from-left">
+                <h1>
+                    Speak To My Husband
+                </h1>
+            </div>
+        </header>
+        <main>
+            <div class="nes-container is-rounded is-dark with-title">
+                <p class="title">Enter text to be spoken aloud in my husbands office:</p>
+                <form action="/save" method="post">
+                    <div class="nes-field is-inline">
+                        <input name="content"  type="text" maxlength="100" class="nes-input is-dark" placeholder="Message?" aria-labelledby="submit-message" required>
+                    </div>
+                    <div class="nes-field is-inline">
+                        <input name="from" type="text" maxlength="100" class="nes-input is-dark" placeholder="From?" aria-labelledby="submit-message" required>
+                    </div>
+                    <button type="submit" class="nes-btn is-success">Send</button>
+                </form>
+                <p class="comments">This app connects to our Raspberry Pi and reads from a queue of messages. Send one now (be nice) </p>
+            </div>
+            <div class="counter nes-text is-primary">
+                <i class="nes-icon is-small heart"></i>
+                <p>
+                    Messages sent:
+                </p>
+                <span class="msg-count nes-text is-error" ></span>
+                <i class="nes-icon is-small heart"></i>
+            </div>
+            <div class="rating">
+                <i class="nes-icon is-medium star"></i>
+                <i class="nes-icon is-medium star"></i>
+                <i class="nes-icon is-medium star"></i>
+                <i class="nes-icon is-medium star"></i>
+                <i class="nes-icon is-medium star is-half"></i>
+                <p class="comments">"Wow, Great App Madeline! It totally didn't scare me to death the first time." <br>- Husband</p>
+            </div>
+        </main>
+        <footer>
+            Made by <a href="https://madeline.codes/" class="nes-text is-success">Madeline Healey</a>.
+        </footer>
+        <script src="/client.js"></script>
+    </body>
+</html>
