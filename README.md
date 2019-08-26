@@ -1,27 +1,60 @@
-Welcome to Glitch
-=================
+# Speak To My Husband
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+I wanted to send messages to our home office, at first as a prank but it eventually turned into a fun project!
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+At current, it's deployed on Glitch as a `Node` app with the `Express` framework. `NES.css` is used as the frontend framework.
 
-Find out more [about Glitch](https://glitch.com/about).
+My Raspberry Pi polls the server's message queue and reads them out via `pyttsx3` a cross-platform Text-To-Speech library.
 
+Deployed [live on Glitch](https://speak-to-my-husband.glitch.me/)!
 
-Your Project
-------------
+&nbsp;
 
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
+![Image of Speak To My Husband](https://raw.githubusercontent.com/madelinecodes/speak-to-my-husband/master/speak-to-my-husband-preview.png "Image of Speak To My Husband")
 
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
+![Raspberry Pi](https://raw.githubusercontent.com/madelinecodes/speak-to-my-husband/master/pi.png "Image of Raspberry Pi")
 
+&nbsp;
 
-Made by [Glitch](https://glitch.com/)
--------------------
+## Install
 
-\ ゜o゜)ノ
+Server:
+
+`npm install`
+
+Client:
+
+`pip install requests`
+
+`pip install pyttsx3`
+
+&nbsp;
+
+## Run
+
+Server:
+
+Setup password:
+
+```
+Unix Bash (Linux, Mac, etc.):
+$ export SECRET=hello
+
+Windows CMD:
+> set SECRET=hello
+
+Windows PowerShell:
+> $env:SECRET = "hello"
+```
+
+`npm start`
+
+Client:
+
+`python reader.py 'https://endpoint-url/' 'password'`
+
+&nbsp;
+
+## License
+
+MIT!
